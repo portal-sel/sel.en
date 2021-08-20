@@ -4,16 +4,16 @@ function setup() {
     getMs()
 
     setName()
-
+    checkUser()
     $(document).ready(function(e){
         calendar = new CalendarYvv("#calendar", moment().format("Y-M-D"), "Monday");
         calendar.funcPer = function(ev){
             // console.log(ev.currentSelected)
             const [anio, mes, dia] = ev.currentSelected.split('-')
             
-            consultaDia(ev.currentSelected)
+            //consultaDia(ev.currentSelected)
         };
-        calendar.diasResal = [4,15,26]
+        //calendar.diasResal = [4,15,26]
        
         calendar.createCalendar();
     });
