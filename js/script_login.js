@@ -9,7 +9,7 @@ function setup() {
     pw      = select('#pw')
     btn_login = select('#ingresar');
     btn_login.mouseClicked(login)
-
+    window.localStorage.clear();
 }
 
 function login() {
