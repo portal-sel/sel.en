@@ -39,7 +39,7 @@ function uploadPDF() {
                 document.getElementById('postPDF').action = urlMs;
                 document.getElementById('postPDF').submit();
                 btn_subir.removeAttribute('disabled');
-                swal('Se abrirá una pestaña en el navegador, por favor no la cierres hasta que el sistema te indique','','success')
+                swal('A tab will open in the browser, please do not close it until the system tells you','','success')
                 .then((value) => {
                     location.reload()
                 });
@@ -48,7 +48,7 @@ function uploadPDF() {
         }
         reader.readAsDataURL(file);
     }else{
-        swal('Campos faltantes','','error')
+        swal('Empty fields','','error')
     }
     
 }
@@ -177,7 +177,7 @@ function validateFiles() {
                                     document.getElementById('postXML').action = urlMs;
                                     document.getElementById('postXML').submit();
                                     btn_subir.removeAttribute('disabled');
-                                    swal('Se abrirá una pestaña en el navegador, por favor no la cierres hasta que el sistema te indique','','success')
+                                    swal('A tab will open in the browser, please do not close it until the system tells you','','success')
                                     .then((value) => {
                                         location.reload()
                                     });
@@ -189,16 +189,16 @@ function validateFiles() {
                 });
             };
         } catch (error) {
-            swal('Campos faltantes','Verifica que cargaste correctamente los archivos','error')
+            swal('Empty fields','Verify that you successfully uploaded the files','error')
             
         }
     }else{
-        swal('Campos faltantes','','error')
+        swal('Empty fields','','error')
     }
 }
 
 function mensajeAlerta(params) {
-    swal('AYUDA','Para cualquier duda o aclaracion puedes contactar al siguiente correo: soporte@sel.com','info')
+    swal('Help!','For any questions or clarification you can contact the following email: support@sel.com','info')
 }
 
 function getMs() {
@@ -215,7 +215,7 @@ function getMs() {
 }
 
 function microservicios(e) {
-    console.log(e);
+    
     urlMs = e.result[2][2]
     
 }
