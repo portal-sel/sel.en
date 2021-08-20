@@ -11,4 +11,8 @@ function setup() {
 
     btn_subir = select('#btnSubir')
     btn_subir.attribute('disabled','')
+    document.getElementById('txt_name').innerHTML = `NOMBRE DE PROVEEDOR: ${localStorage.getItem('nombre')}`
+    document.getElementById('txt_rfc').innerHTML = `RFC DE PROVEEDOR: ${localStorage.getItem('rfc')}`
+    
+    checkUser()
 }
